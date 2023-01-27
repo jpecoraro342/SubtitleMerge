@@ -58,9 +58,9 @@
 		15FCC804298326C500AB9CE2 /* SubtitleMerge */ = {
 			isa = PBXGroup;
 			children = (
+				15FCC805298326C500AB9CE2 /* SubtitleMergeApp.swift */,
 				15FCC81429833DC500AB9CE2 /* FFmpegBuilder.swift */,
 				15FCC8182983484F00AB9CE2 /* FileButton.swift */,
-				15FCC805298326C500AB9CE2 /* SubtitleMergeApp.swift */,
 				15FCC81629833FD800AB9CE2 /* ErrorAlertDialog.swift */,
 				15FCC807298326C500AB9CE2 /* ContentView.swift */,
 				15FCC809298326C600AB9CE2 /* Assets.xcassets */,
@@ -291,7 +291,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.joseph.pecoraro.SubtitleMerge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -318,7 +318,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.joseph.pecoraro.SubtitleMerge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
