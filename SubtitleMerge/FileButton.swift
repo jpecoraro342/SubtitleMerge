@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-// TODO: Accept drag events https://developer.apple.com/documentation/appkit/documents_data_and_pasteboard/supporting_drag_and_drop_through_file_promises
 // TODO: Support multiselect
 struct FileButton: View {
     var title = "Select File"
     var action: (URL?) -> Void
+    @State var isTargeted: Bool = true
     
     var body: some View {
         Button(title) {
@@ -21,6 +21,19 @@ struct FileButton: View {
             if panel.runModal() == .OK {
                 action(panel.url)
             }
+        }
+        .onDrop(of: [.fileURL], isTargeted: $isTargeted) { providers in
+            guard let item = providers.first else { return false }
+            guard let identifier = item.registeredTypeIdentifiers.first else { return false }
+            
+            item.loadItem(forTypeIdentifier: identifier, options: nil) { (urlData, error) in
+                if let urlData = urlData as? Data {
+                    let fileUrl = URL(dataRepresentation: urlData, relativeTo: nil)
+                    action(fileUrl)
+                }
+            }
+            
+            return true
         }
     }
 }
