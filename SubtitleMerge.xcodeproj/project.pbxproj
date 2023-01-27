@@ -11,6 +11,9 @@
 		15FCC808298326C500AB9CE2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FCC807298326C500AB9CE2 /* ContentView.swift */; };
 		15FCC80A298326C600AB9CE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15FCC809298326C600AB9CE2 /* Assets.xcassets */; };
 		15FCC80D298326C600AB9CE2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15FCC80C298326C600AB9CE2 /* Preview Assets.xcassets */; };
+		15FCC81529833DC500AB9CE2 /* FFmpegBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FCC81429833DC500AB9CE2 /* FFmpegBuilder.swift */; };
+		15FCC81729833FD800AB9CE2 /* ErrorAlertDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FCC81629833FD800AB9CE2 /* ErrorAlertDialog.swift */; };
+		15FCC8192983484F00AB9CE2 /* FileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FCC8182983484F00AB9CE2 /* FileButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,9 @@
 		15FCC809298326C600AB9CE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15FCC80C298326C600AB9CE2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		15FCC80E298326C600AB9CE2 /* SubtitleMerge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SubtitleMerge.entitlements; sourceTree = "<group>"; };
+		15FCC81429833DC500AB9CE2 /* FFmpegBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFmpegBuilder.swift; sourceTree = "<group>"; };
+		15FCC81629833FD800AB9CE2 /* ErrorAlertDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertDialog.swift; sourceTree = "<group>"; };
+		15FCC8182983484F00AB9CE2 /* FileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +58,10 @@
 		15FCC804298326C500AB9CE2 /* SubtitleMerge */ = {
 			isa = PBXGroup;
 			children = (
+				15FCC81429833DC500AB9CE2 /* FFmpegBuilder.swift */,
+				15FCC8182983484F00AB9CE2 /* FileButton.swift */,
 				15FCC805298326C500AB9CE2 /* SubtitleMergeApp.swift */,
+				15FCC81629833FD800AB9CE2 /* ErrorAlertDialog.swift */,
 				15FCC807298326C500AB9CE2 /* ContentView.swift */,
 				15FCC809298326C600AB9CE2 /* Assets.xcassets */,
 				15FCC80E298326C600AB9CE2 /* SubtitleMerge.entitlements */,
@@ -139,8 +148,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15FCC81529833DC500AB9CE2 /* FFmpegBuilder.swift in Sources */,
 				15FCC808298326C500AB9CE2 /* ContentView.swift in Sources */,
 				15FCC806298326C500AB9CE2 /* SubtitleMergeApp.swift in Sources */,
+				15FCC8192983484F00AB9CE2 /* FileButton.swift in Sources */,
+				15FCC81729833FD800AB9CE2 /* ErrorAlertDialog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
