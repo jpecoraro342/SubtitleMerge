@@ -71,13 +71,29 @@ struct ContentView: View {
         }
     }
     
-    // TODO: Increment so we don't choose an output path that already exists
     // TODO: Allow user to choose the output path
     // TODO: Show the output path
     func outputPath() -> URL {
-        return URL(fileURLWithPath: videoInput?.path ?? "output")
+        let outputUrl = URL(fileURLWithPath: videoInput?.path ?? "output")
             .deletingPathExtension()
             .appendingPathExtension("mkv")
+    
+        return FileManager.default.fileExists(atPath: outputUrl.path)
+        ? uniquePath(basePath: outputUrl.deletingPathExtension().path, increment: 1)
+        : outputUrl
+    }
+    
+    func uniquePath(basePath: String, increment: Int) -> URL {
+        let outputUrl = URL(fileURLWithPath: "\(basePath) (\(increment))")
+            .appendingPathExtension("mkv")
+        
+        if FileManager.default.fileExists(atPath: outputUrl.path) {
+            return uniquePath(basePath: basePath, increment: increment + 1)
+        }
+        
+        return FileManager.default.fileExists(atPath: outputUrl.path)
+        ? uniquePath(basePath: basePath, increment: increment + 1)
+        : outputUrl
     }
     
     func subtitleMergeCompleted(process: Process) {

@@ -8,6 +8,7 @@
 import SwiftUI
 
 @main
+// TODO: Make this an applet?
 struct SubtitleMergeApp: App {
     var body: some Scene {
         WindowGroup {
